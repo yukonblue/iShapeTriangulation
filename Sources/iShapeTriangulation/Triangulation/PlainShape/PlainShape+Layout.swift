@@ -480,7 +480,13 @@ extension PlainShape {
                     }   //  while dSubs
                 }   // switch
                 
-                throw SplitError.unusedPoint
+                #if false
+                // throw SplitError.unusedPoint
+                #else
+                i += 1
+                continue nextNode
+                #endif
+
         }
         
         let pathCount = navigator.pathCount
